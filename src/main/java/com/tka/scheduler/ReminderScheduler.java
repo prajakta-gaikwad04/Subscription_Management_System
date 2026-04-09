@@ -21,7 +21,7 @@ public class ReminderScheduler {
     @Autowired
     private EmailService emailService;
 
-    @Scheduled(cron = "0 0 9 * * ?") // runs every day at 9 AM
+    @Scheduled(cron = "0 0 9 * * ?") 
     public void checkUpcomingPayments() {
 
         LocalDate today = LocalDate.now();

@@ -16,7 +16,7 @@ public class SettingsController {
     private UserRepository userRepository;
 
 
-    // open settings page
+    
     @GetMapping
     public String openSettings(Model model) {
 
@@ -28,7 +28,7 @@ public class SettingsController {
     }
 
 
-    // update settings
+   
     @PostMapping("/update")
     public String updateSettings(@ModelAttribute User user) {
 

@@ -21,7 +21,7 @@ public class SubscriptionController {
     @Autowired
     private SubscriptionService subscriptionService;
 
-    // Show all subscriptions
+   
     @GetMapping("/list")
     public String listSubscriptions(Model model,
             @RequestParam(required = false) String keyword,
@@ -42,14 +42,14 @@ public class SubscriptionController {
         model.addAttribute("subscriptions", subscriptions);
         return "subscriptions";
     }
-    // Show add form
+    
     @GetMapping("/add")
     public String addForm() {
         return "addSubscription";
     }
 
 
-    // Save subscription
+    
     @PostMapping("/add")
     public String saveSubscription(@ModelAttribute Subscription sub) {
 
@@ -59,7 +59,7 @@ public class SubscriptionController {
     }
 
 
-    // View subscriptions
+    
     @GetMapping("/view")
     public String viewSubscriptions(Model model) {
 
@@ -71,7 +71,7 @@ public class SubscriptionController {
     }
 
 
-    // Delete subscription
+   
     @GetMapping("/delete/{id}")
     public String deleteSubscription(@PathVariable Long id) {
 
@@ -81,7 +81,7 @@ public class SubscriptionController {
     }
 
 
-    // Edit form
+    
     @GetMapping("/edit/{id}")
     public String editSubscription(@PathVariable Long id, Model model) {
 
@@ -93,7 +93,7 @@ public class SubscriptionController {
     }
 
 
-    // Update subscription
+   
     @PostMapping("/update")
     public String updateSubscription(@ModelAttribute Subscription sub) {
 

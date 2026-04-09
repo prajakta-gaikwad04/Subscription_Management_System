@@ -33,7 +33,7 @@ public class AuthController {
 
         userService.register(user);
 
-        return "login";   // go to login.jsp
+        return "login";   
     }
 
     @GetMapping("/login")
